@@ -22,11 +22,11 @@ const Sidebar = ({setOpenSideMenu}) => {
 
   const discover = [
     {name: "Collection", link: "collection"},
-    {name: "Search", link: "search"},
-    {name: "Author Profile", link: "author-profile"},
+    {name: "Search", link: "searchPage"},
+    {name: "Author Profile", link: "author"},
     {name: "NFT Details", link: "NFT-details"},
-    {name: "Account Setting", link: "account-setting"},
-    {name: "Connect Wallet", link: "connect-wallet"},
+    {name: "Account Setting", link: "account"},
+    {name: "Connect Wallet", link: "connectWallet"},
     {name: "Blog", link: "blog"},
   ];
 
