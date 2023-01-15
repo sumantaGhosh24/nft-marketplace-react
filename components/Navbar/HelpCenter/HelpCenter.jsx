@@ -5,11 +5,26 @@ import Style from "./HelpCenter.module.css";
 
 const HelpCenter = () => {
   const helpCenter = [
-    {name: "About", link: "about"},
-    {name: "Contact Us", link: "contact-us"},
-    {name: "Sign Up", link: "sign-up"},
-    {name: "Sign In", link: "sign-in"},
-    {name: "Subscription", link: "subscription"},
+    {
+      name: "About",
+      link: "aboutus",
+    },
+    {
+      name: "Contact Us",
+      link: "contactus",
+    },
+    {
+      name: "Sign Up",
+      link: "signUp",
+    },
+    {
+      name: "LogIn",
+      link: "login",
+    },
+    {
+      name: "Subscription",
+      link: "subscription",
+    },
   ];
 
   return (

@@ -16,3 +16,5 @@ export {default as FollowerTab} from "./FollowerTab/FollowerTab";
 export {default as Slider} from "./Slider/Slider";
 export {default as Brand} from "./Brand/Brand";
 export {default as Video} from "./Video/Video";
+export {default as Loader} from "./Loader/Loader";
+export {default as Error} from "./Error/Error";
