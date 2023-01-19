@@ -3,10 +3,13 @@ import Image from "next/image";
 
 import Style from "./Error.module.css";
 import images from "../../img";
+import {NFTMarketplaceContext} from "../../Context/NFTMarketplaceContext";
 
 const Error = () => {
+  const {error, setOpenError} = useContext(NFTMarketplaceContext);
+
   return (
-    <div className={Style.Error} onClick={() => {}}>
+    <div className={Style.Error} onClick={() => setOpenError(false)}>
       <div className={Style.Error_box}>
         <div className={Style.Error_box_info}>
           <Image
@@ -17,10 +20,7 @@ const Error = () => {
             objectFit="cover"
             className={Style.Error_box_info_img}
           />
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum,
-            optio.
-          </p>
+          <p>{error}</p>
         </div>
       </div>
     </div>

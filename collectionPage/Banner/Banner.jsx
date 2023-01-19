@@ -15,7 +15,6 @@ const Banner = ({bannerImage}) => {
           height={100}
         />
       </div>
-
       <div className={Style.banner_img_mobile}>
         <Image
           src={bannerImage}

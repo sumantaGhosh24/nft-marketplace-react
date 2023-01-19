@@ -57,7 +57,7 @@ const aboutus = () => {
             </p>
           </div>
           <div className={Style.aboutus_box_hero_right}>
-            <Image src={images.hero2} />
+            <Image src={images.hero} />
           </div>
         </div>
         <div className={Style.aboutus_box_title}>

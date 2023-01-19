@@ -6,13 +6,26 @@ import Style from "../styles/transferFunds.module.css";
 import formStyle from "../AccountPage/Form/Form.module.css";
 import images from "../img";
 import {Button, Loader} from "../components";
+import {NFTMarketplaceContext} from "../Context/NFTMarketplaceContext";
 
 const transferFunds = () => {
+  const {
+    currentAccount,
+    transferEther,
+    loading,
+    accountBalance,
+    transactions,
+    getAllTransactions,
+  } = useContext(NFTMarketplaceContext);
   const [transferAmount, setTransferAmount] = useState("");
   const [transferAccount, setTransferAccount] = useState("");
   const [message, setMessage] = useState("");
   const [readMessage, setReadMessage] = useState("");
   const [openBox, setOpenBox] = useState(false);
+
+  useEffect(() => {
+    getAllTransactions();
+  });
 
   return (
     <div className={Style.transfer}>

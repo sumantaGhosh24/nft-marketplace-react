@@ -22,7 +22,6 @@ const SliderCard = () => {
         <div className={Style.sliderCard_box_title}>
           <p>NFT Video #1245</p>
           <div className={Style.sliderCard_box_title_like}>
-            {/* <LikeProfile /> */}
             <small>1 0f 100</small>
           </div>
         </div>

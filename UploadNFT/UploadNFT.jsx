@@ -12,7 +12,7 @@ import images from "../img";
 import {Button} from "../components";
 import {DropZone} from "../UploadNFT";
 
-const UploadNFT = () => {
+const UploadNFT = ({uploadToIPFS, createNFT}) => {
   const [price, setPrice] = useState("");
   const [active, setActive] = useState(0);
   const [name, setName] = useState("");
@@ -24,7 +24,9 @@ const UploadNFT = () => {
   const [properties, setProperties] = useState("");
   const [image, setImage] = useState(null);
 
-  const categoryArry = [
+  const router = useRouter();
+
+  const categoryArray = [
     {
       image: images.nft_image_1,
       category: "Sports",
@@ -65,6 +67,7 @@ const UploadNFT = () => {
         category={category}
         properties={properties}
         setImage={setImage}
+        uploadToIPFS={uploadToIPFS}
       />
       <div className={Style.upload_box}>
         <div className={formStyle.Form_box_input}>
@@ -115,7 +118,7 @@ const UploadNFT = () => {
             Choose an exiting collection or create a new one
           </p>
           <div className={Style.upload_box_slider_div}>
-            {categoryArry.map((el, i) => (
+            {categoryArray.map((el, i) => (
               <div
                 className={`${Style.upload_box_slider} ${
                   active == i + 1 ? Style.active : ""
@@ -199,7 +202,20 @@ const UploadNFT = () => {
         <div className={Style.upload_box_btn}>
           <Button
             btnName="Upload"
-            handleClick={() => {}}
+            handleClick={async () =>
+              createNFT(
+                name,
+                price,
+                image,
+                description,
+                router,
+                website,
+                royalties,
+                fileSize,
+                category,
+                properties
+              )
+            }
             classStyle={Style.upload_box_btn_style}
           />
           <Button

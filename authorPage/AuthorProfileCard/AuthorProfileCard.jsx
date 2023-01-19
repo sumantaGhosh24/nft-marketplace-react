@@ -18,7 +18,7 @@ import Style from "./AuthorProfileCard.module.css";
 import images from "../../img";
 import {Button} from "../../components";
 
-const AuthorProfileCard = () => {
+const AuthorProfileCard = ({currentAccount}) => {
   const [share, setShare] = useState(false);
   const [report, setReport] = useState(false);
 
@@ -60,20 +60,20 @@ const AuthorProfileCard = () => {
         </div>
         <div className={Style.AuthorProfileCard_box_info}>
           <h2>
-            Dony Herrera{""}{" "}
+            Done Herrera{""}{" "}
             <span>
               <MdVerified />
             </span>{" "}
           </h2>
           <div className={Style.AuthorProfileCard_box_info_address}>
-            <input type="text" value={"0x256458754565325421542"} id="myInput" />
+            <input type="text" value={currentAccount} id="myInput" />
             <FiCopy
               onClick={() => copyAddress()}
               className={Style.AuthorProfileCard_box_info_address_icon}
             />
           </div>
           <p>
-            Punk #4786 / An OG Cryptopunk Collector, hoarder of NFTs.
+            Punk #4786 / An OG Cryptopro Collector, hoarder of NFTs.
             Contributing to @ether_cards, an NFT Monetization Platform.
           </p>
           <div className={Style.AuthorProfileCard_box_info_social}>
@@ -111,7 +111,7 @@ const AuthorProfileCard = () => {
                   <TiSocialInstagram />
                 </span>{" "}
                 {""}
-                Instragram
+                Instagram
               </p>
               <p>
                 <span>
